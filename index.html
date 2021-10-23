@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Birthday</title>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <h1>HAPPY BIRTHDAY KALYANI</h1>
+            <button class="btn">CLICK HERE</button>
+        </div>
+        <div class="popup">
+            <h1> 
+                <span>H</span>
+                <span>B</span>
+                <span>D</span>
+                <span>-</span>
+                <span>K</span>
+                <span>A</span>
+                <span>L</span>
+                <span>Y</span>
+                <span>A</span>
+                <span>N</span>
+                <span>I</span>
+            </h1>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8OSTKAx3w3LE0fhej0nw2-Em6eATBIXK1uA&usqp=CAU" alt="PIC">
+            <b class="close">X</b>
+        </div>
+    </section>
+    <canvas id="my-canvas"></canvas>
+
+    <script src="index.min.js"></script>
+
+    <script>
+        let btn = document.querySelector('.btn');
+        let popup = document.querySelector('.popup');
+        let close = document.querySelector('.close');
+        let canvas = document.querySelector('#my-canvas');
+        btn.onclick = function(){
+            popup.classList.add('active');
+            canvas.classList.add('active');
+        }
+        close.onclick = function(){
+            popup.classList.remove('active');
+            canvas.classList.remove('active');
+        }
+
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+    </script>
+</body>
+</html>
